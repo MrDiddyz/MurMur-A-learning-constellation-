@@ -1,244 +1,70 @@
-# MurMur-A-learning-constellation-
-Learning by reflecting 
-# MurMur — A Learning Constellation
-:::writing{variant=“standard” id=“73104”}
+# 🜂 MurMur
+### A Learning Constellation
 
-MurMur — A Learning Constellation
+Distributed Multi-Agent Intelligence System
 
-Production-grade adaptive multi-agent intelligence platform.
+<p align="center">
 
-MurMur is a reflective learning system designed to simulate, evaluate, and optimize decisions through structured agent execution, event logging, and baseline evolution.
+![License](https://img.shields.io/badge/license-MIT-black)
+![Agents](https://img.shields.io/badge/agents-10-gold)
+![Architecture](https://img.shields.io/badge/architecture-distributed-black)
+![Status](https://img.shields.io/badge/status-experimental-gold)
 
-The platform combines:
-	•	Multi-agent reasoning
-	•	Reinforcement-driven optimization
-	•	Scenario simulation
-	•	Append-only event intelligence
-	•	SaaS deployment architecture
+</p>
 
-⸻
+---
 
-Overview
+## ✦ Vision
 
-MurMur is built as a modular intelligence system that continuously improves its own strategies.
+MurMur explores a new paradigm for artificial intelligence.
 
-Core capabilities:
-	•	Reflective agent execution
-	•	Policy experimentation
-	•	Reward-based optimization
-	•	Baseline versioning with rollback
-	•	Full execution audit trail
-	•	Real-time operational dashboard
+Instead of relying on a single AI model, MurMur coordinates a **constellation of specialized agents** that collaborate, debate, and synthesize knowledge together.
 
-This repository contains the SaaS platform implementation powering the MurMur system.
-
-⸻
-
-Architecture
-
-System layers:
-	1.	Interface Layer
-Next.js App Router UI for interaction and monitoring.
-	2.	Intelligence Layer
-Agent execution engine + policy mutation + reward evaluation.
-	3.	Data Layer
-Supabase database with row-level security and append-only event logging.
-	4.	Execution Layer
-Serverless processing and background workflows.
-	5.	Infrastructure Layer
-Netlify deployment with secure serverless functions.
+The goal is to create a **distributed intelligence layer** capable of:
 
-⸻
+- large-scale research  
+- narrative analysis  
+- creative systems  
+- decision support  
 
-SaaS Platform
+MurMur acts as an orchestration layer connecting AI agents, infrastructure, and knowledge systems.
 
-Next.js Application Structure
+---
 
-App Router architecture with clear domain separation.
-app/
-  page.tsx                → Landing
-  dashboard/page.tsx      → Runs + proposals + metrics
-  baseline/page.tsx       → Baseline history + rollback
-  settings/page.tsx       → System configuration
+## ✦ MurMur Constellation Architecture
 
-app/api/
-  health/route.ts
-  run/route.ts
+MurMur operates as a **constellation of agents coordinated by an orchestrator**.
 
-components/
-lib/
-  supabase/
-  auth/
-  domain/
+Tasks move through a structured pipeline where agents analyze, debate, and synthesize results.
 
-db/
-  migrations/
-  policies/
-  rpc/
+```mermaid
+flowchart TB
+    U[Human / Founder] --> UI[MurMur Dashboard]
 
-netlify/functions/
-Supabase Database + Row Level Security
+    UI --> ORCH[God Agent / Orchestrator]
 
-Multi-tenant ready data model with strict ownership enforcement.
+    ORCH --> COUNCIL[Constellation Council]
 
-Core tables:
-	•	profiles
-	•	agent_runs
-	•	agent_run_events (append-only)
-	•	baselines
-	•	baseline_changes
+    COUNCIL --> A1[Research Agent]
+    COUNCIL --> A2[Pattern Detection Agent]
+    COUNCIL --> A3[Narrative Analysis Agent]
+    COUNCIL --> A4[Strategy Agent]
+    COUNCIL --> A5[Experimental Agent]
+    COUNCIL --> A6[Teacher Agent]
+    COUNCIL --> A7[Reflective Agent]
 
-Security principles:
-	•	All data scoped to authenticated user
-	•	RLS enforced on every table
-	•	Controlled mutations via SQL RPC functions
-	•	Audit-first design
+    A1 --> QUEUE[Supabase Job Queue]
+    A2 --> QUEUE
+    A3 --> QUEUE
+    A4 --> QUEUE
+    A5 --> QUEUE
+    A6 --> QUEUE
+    A7 --> QUEUE
 
-⸻
+    QUEUE --> WORKERS[Workers / Executors]
 
-Authentication + Dashboard
+    WORKERS --> MEMORY[Knowledge Store]
+    WORKERS --> OUTPUT[Results]
 
-Authentication handled via Supabase Auth.
-
-Protected routes:
-	•	/dashboard
-	•	/baseline
-	•	/settings
-
-Dashboard capabilities:
-	•	Execution monitoring
-	•	Proposal evaluation
-	•	Reward tracking
-	•	Baseline activation and rollback
-	•	Event stream inspection
-
-⸻
-
-Logging and Event Intelligence
-
-All system activity is recorded as immutable events.
-
-Example event types:
-	•	run_created
-	•	run_started
-	•	heartbeat
-	•	tool_called
-	•	proposal_generated
-	•	baseline_applied
-	•	run_finished
-	•	run_failed
-
-Each event contains structured metadata for:
-	•	debugging
-	•	analytics
-	•	replay
-	•	reinforcement learning
-	•	audit compliance
-
-⸻
-
-Deployment — Netlify
-
-MurMur is deployed using Netlify serverless infrastructure.
-
-Build configuration
-	•	Framework: Next.js App Router
-	•	Functions: Netlify Functions directory
-	•	Environment variables managed via Netlify dashboard
-
-Security headers
-
-Recommended:
-	•	X-Frame-Options DENY
-	•	X-Content-Type-Options nosniff
-	•	Referrer-Policy strict-origin-when-cross-origin
-
-Serverless execution
-
-Used for:
-	•	background jobs
-	•	agent execution endpoints
-	•	secure service-role database access
-	•	event ingestion
-
-⸻
-
-Infrastructure Strategy
-
-Designed for scalability from day one.
-	•	Async job execution
-	•	Worker retry logic
-	•	Event-driven processing
-	•	Observability hooks
-	•	Multi-region ready architecture
-
-Future upgrades:
-	•	distributed queues
-	•	streaming analytics
-	•	adaptive resource scaling
-
-⸻
-
-Security Model
-	•	Row-level data isolation
-	•	Append-only audit logs
-	•	Server-side secret handling
-	•	Role-based access expansion ready
-	•	GDPR-compliant data ownership model
-
-Planned:
-	•	anomaly detection
-	•	AI moderation layer
-	•	encrypted event archives
-
-⸻
-
-Roadmap
-
-Phase 1 — SaaS Core
-Agent execution, logging, dashboard, baseline control.
-
-Phase 2 — Optimization Engine
-Automated policy mutation and reward shaping.
-
-Phase 3 — Autonomous Intelligence
-Self-improving decision loops.
-
-Phase 4 — Multi-agent Coordination
-Distributed reasoning networks.
-
-Phase 5 — Self-evolving Infrastructure
-Adaptive system architecture.
-
-⸻
-
-Development Setup
-
-Install dependencies:
-npm install
-npm run dev
-SUPABASE_URL
-	•	SUPABASE_ANON_KEY
-	•	SUPABASE_SERVICE_ROLE_KEY
-Contributing
-
-Contributions should maintain:
-	•	modular architecture
-	•	append-only logging discipline
-	•	strict data ownership enforcement
-	•	production-grade code quality
-
-⸻
-
-License
-
-Proprietary — MurMur Intelligence System
-
-⸻
-
-System Identity
-
-MurMur is not a static application.
-
-It is a continuously learning operational intelligence environment.
-:::
+    MEMORY --> ORCH
+    OUTPUT --> UI
