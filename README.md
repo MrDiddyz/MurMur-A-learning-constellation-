@@ -1,4 +1,5 @@
-# 🜂 MurMur# MurMur : A Learning Constellation 🌌
+# 🜂 MurMur# 
+MurMur : A Learning Constellation 🌌
 A modular multi-agent reasoning architecture where specialized AI agents collaborate to plan, research, critique, and evolve solutions.
 ## MurMur Constellation Architecture
 
