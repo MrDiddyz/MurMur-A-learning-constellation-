@@ -1,4 +1,46 @@
 # 🜂 MurMur
+## MurMur Constellation Architecture
+
+```mermaid
+graph TD
+
+Core((MurMur Core))
+
+%% Primary cognitive agents
+Planner((Planner Agent))
+Research((Research Cluster))
+Critic((Critic Agent))
+Council((Council System))
+Memory((Memory))
+Evolution((Evolution Engine))
+
+%% Research satellites
+Knowledge((Knowledge))
+Trend((Trend))
+Market((Market))
+Tech((Tech))
+
+%% Council satellites
+VoteA((Vote A))
+VoteB((Vote B))
+VoteC((Vote C))
+
+Core --- Planner
+Core --- Research
+Core --- Critic
+Core --- Council
+Core --- Memory
+Core --- Evolution
+
+Research --- Knowledge
+Research --- Trend
+Research --- Market
+Research --- Tech
+
+Council --- VoteA
+Council --- VoteB
+Council --- VoteC
+```
 ### A Learning Constellation
 
 Distributed Multi-Agent Intelligence System
