@@ -2,7 +2,81 @@
 MurMur : A Learning Constellation 🌌
 A modular multi-agent reasoning architecture where specialized AI agents collaborate to plan, research, critique, and evolve solutions.
 ## MurMur Constellation Architecture
+graph TD
 
+CORE[ MurMur Core Engine ]
+
+subgraph KNOWLEDGE
+R[Research]
+TR[Trend]
+TE[Tech]
+DA[Data]
+end
+
+subgraph STRATEGY
+ST[Strategy]
+SC[Scenario]
+RI[Risk]
+OP[Opportunity]
+end
+
+subgraph MARKET
+MA[Market]
+DE[Demand]
+RE[Revenue]
+CO[Competitor]
+end
+
+subgraph INNOVATION
+EX[Experimental]
+ID[Idea]
+PR[Prototype]
+DS[Design]
+end
+
+subgraph GOVERNANCE
+RF[Reflective]
+ET[Ethics]
+SE[Security]
+AU[Audit]
+end
+
+subgraph EXECUTION
+PL[Planner]
+BU[Builder]
+AU2[Automation]
+DP[Deployment]
+end
+
+CORE --- R
+CORE --- TR
+CORE --- TE
+CORE --- DA
+
+CORE --- ST
+CORE --- SC
+CORE --- RI
+CORE --- OP
+
+CORE --- MA
+CORE --- DE
+CORE --- RE
+CORE --- CO
+
+CORE --- EX
+CORE --- ID
+CORE --- PR
+CORE --- DS
+
+CORE --- RF
+CORE --- ET
+CORE --- SE
+CORE --- AU
+
+CORE --- PL
+CORE --- BU
+CORE --- AU2
+CORE --- DP
 ```mermaid
 graph TD
 
